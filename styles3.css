@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+.socialicons {
+    display: flex;
+    margin-top: 100px;
+}
+.socialicons .icon{
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 5px 10px rgba(0,0,0,0.05);
+    margin: 0 30px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+a:after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    transition: 0.15s;
+
+}
+.facebook-icon:after {
+    background: linear-gradient(to bottom, #3A5795 0%, #2B4886 100%);
+}
+
+.twitter-icon:after {
+    background: linear-gradient(to bottom, #55ACEE 0%, #42A5F5 100%);
+}
+.instagram-icon::after{
+    background: linear-gradient(to bottom, #8A2387, #E94057, #F27121);
+}
+
+.linkedin-icon:after {
+    background: linear-gradient(to bottom, #0077B5 0%, #00A0E3 100%);
+}
+
+.github-icon:after {
+    background: #333;
+}
+.socialicons .icon:hover {
+    color: #fff;
+}
+a:hover::after {
+    bottom: 0;
+}
